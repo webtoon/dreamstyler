@@ -1,0 +1,10 @@
+01.png, A painting of a blue door and window, with a flower pot in the foreground, in the style of {}
+02.png, A painting of a street in New York City, bustling with a crossing crowd, cars, and buildings, in the style of {}
+03.png, A painting of pencil, pears and apples on a cloth, in the style of {}
+04.png, A painting of a street with buildings on both sides, in the style of {}
+05.png, A painting of boats in the harbor with a backdrop of smoke and a bridge, in the style of {}
+06.png, A painting of a woman in a blue dress playing a violin, alongside another woman in a red dress playing a piano behind the violinist, with women sitting in chairs, engrossed in listening to the music, in the style of {}
+07.png, A painting of a bustling street market, filled with people, stalls, a carriage, shops, and surrounding buildings, in the style of {}
+08.png, A painting of a city bridge, busy with people carrying umbrellas and a wagon, and buildings depicted in the background, in the style of {}
+09.png, A painting of a street scene with a mosque and trees in the background, in the style of {}
+10.png, A painting of a woman reading a book, with a vase of flowers and a ghost seated at the table, and a mirror positioned next to the woman, in the style of {}

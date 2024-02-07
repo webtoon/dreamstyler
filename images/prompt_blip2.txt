@@ -1,0 +1,10 @@
+01.png, A painting of a blue door and potted plant in the style of {}
+02.png, A painting of a busy street in new york city in the style of {}
+03.png, A painting of pears and apples on a cloth in the style of {}
+04.png, A painting of a street with buildings on both sides in the style of {}
+05.png, A painting of boats in the water with smoke in the style of {}
+06.png, A painting of women in dresses playing music in the style of {}
+07.png, A painting of a street scene with people and umbrellas in the style of {}
+08.png, A painting of a city street with people and umbrellas in the style of {}
+09.png, A painting of a street with a mosque in the background in the style of {}
+10.png, A painting of a woman reading a book in the style of {}
