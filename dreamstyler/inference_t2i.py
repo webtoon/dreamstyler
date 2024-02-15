@@ -105,7 +105,7 @@ def t2i(
         ).images[0])
 
     outputs = np.concatenate([np.asarray(img) for img in outputs], axis=1)
-    save_path = ospj(saveroot, f"{prompt.replace('in the style of {}', ''}.png")
+    save_path = ospj(saveroot, f"{prompt.replace('in the style of {}', '')}.png")
     imageio.imsave(save_path, outputs)
 
 
