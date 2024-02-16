@@ -15,6 +15,7 @@ from controlnet_aux.processor import Processor
 import custom_pipelines
 
 
+
 def load_model(sd_path, controlnet_path, embedding_path, placeholder_token="<sks1>", num_stages=6):
     tokenizer = CLIPTokenizer.from_pretrained(sd_path, subfolder="tokenizer")
     text_encoder = CLIPTextModel.from_pretrained(sd_path, subfolder="text_encoder")
@@ -57,6 +58,7 @@ def load_model(sd_path, controlnet_path, embedding_path, placeholder_token="<sks
 @click.option("--placeholder_token", default="<sks1>")
 @click.option("--num_stages", default=6)
 @click.option("--num_samples", default=5)
+@click.option("--resolution", default=512)
 @click.option("--seed")
 def style_transfer(
     sd_path=None,
@@ -68,6 +70,7 @@ def style_transfer(
     placeholder_token="<sks1>",
     num_stages=6,
     num_samples=5,
+    resolution=512,
     seed=None,
 ):
     os.makedirs(saveroot, exist_ok=True)
@@ -82,18 +85,22 @@ def style_transfer(
     cross_attention_kwargs = {"num_stages": num_stages}
 
     content_image = Image.open(content_image_path)
+    content_image = content_image.resize((resolution, resolution))
     control_image = processor(content_image, to_pil=True)
     pos_prompt = [prompt.format(f"{placeholder_token}-T{t}") for t in range(num_stages)]
 
     outputs = []
+    # torch.manual_seed(1)    
     for _ in range(num_samples):
         output = pipeline(
             prompt=pos_prompt,
-            num_inference_steps=30,
+            num_inference_steps=30, 
             generator=generator,
             image=content_image,
             control_image=control_image,
             cross_attention_kwargs=cross_attention_kwargs,
+            # strength=0.8,             
+            # guidance_scale=7.5      
         ).images[0]
         outputs.append(output)
 
