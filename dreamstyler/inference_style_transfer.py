@@ -91,7 +91,7 @@ def style_transfer(
 
     outputs = []
     # torch.manual_seed(1)    
-    for _ in range(1):
+    for _ in range(num_samples):
         output = pipeline(
             prompt=pos_prompt,
             num_inference_steps=30, 
